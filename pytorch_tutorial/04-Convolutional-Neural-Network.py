@@ -55,7 +55,8 @@ class CNN(nn.Module):
             nn.ReLU(),
             nn.MaxPool2d(2)             # output shape (32, 7, 7)
         )
-        self.fc = nn.Linear(32*7*7, 10)
+        self.fc = nn.Linear(32*7*7, 10)     # fully connected layer, output 10 classes
+
         
         
     def forward(self, x):
